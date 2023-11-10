@@ -9,69 +9,149 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Footer Styles */
+        #mainFooter::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            display: block;
+            width: 100%;
+            height: 38px;
+            background: linear-gradient(0deg, #DF4033 20%, #fff 20%, #fff 32%, #0A7F62 32%, #0A7F62 68%, #fff 68%, #fff 80%, #EF7139 80%);
+        }
+
+        #mainFooter .about-tab figcaption {
+            line-height: 1.7;
+        }
+
         #mainFooter {
-            background-color: #0a7f62;
-            padding: 20px 0;
-            font-size: .885rem;
-            font-weight: 500;
-            color: white;
             position: relative;
             padding-top: 5rem;
             padding-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
-
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            background-color: #0a7f62;
+            font-size: .875rem;
+            color: #fff;
         }
 
-        .header {
-            margin: 5px 0;
-            width: 21%;
-            word-spacing: 4px;
-            letter-spacing: 50%;
-            text-align: left;
-            position:absolute;
+        .container,
+        .container-fluid,
+        .container-xxl,
+        .container-xl,
+        .container-lg,
+        .container-md,
+        .container-sm {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .main {
+            --bs-columns: 12;
+            --bs-gap: 1rem;
+            padding-bottom: 1rem !important;
+        }
+
+        .pb-3 {
+            padding-bottom: 1rem !important;
+        }
+
+        .pb-4 {
+            padding-bottom: 1.5rem !important;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-rows: repeat(var(--bs-rows, 1), 1fr);
+            grid-template-columns: repeat(var(--bs-columns, 12), 1fr);
+            gap: var(--bs-gap, 1.5rem);
+        }
+
+        .g-col-12 {
+            grid-column: auto/span 12;
+        }
+
+        .g-col-xl-3 {
+            grid-column: auto/span 3;
+        }
+
+        .g-col-xl-9 {
+            grid-column: auto/span 9;
+        }
+
+        .g-col-md-9 {
+            grid-column: auto/span 9;
+        }
+
+        .g-col-xl-6 {
+            grid-column: auto/span 6;
+        }
+
+        .figure-img {
+            margin-bottom: .5rem;
+            line-height: 1;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        img,
+        svg {
+            vertical-align: middle;
         }
 
         .text-start {
-            padding-top: 2rem;
+            text-align: left !important;
         }
 
-        .menu {
-            width: 50%;
-            margin-left: 30%;
+        .mt-3 {
+            margin-top: 1rem !important;
         }
 
         .footer-menu {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .footer-menu h6,
+        .subscription-form h6 {
+            color: #f2ffc6;
+            font-weight: 600;
+            font-size: .875rem;
+            letter-spacing: .5px;
+            margin-top: 0;
+            margin-bottom: .5rem;
+            line-height: 1.25;
+        }
+
+        .important,
+        .more-info,
+        .corporate,
+        .get-know,
+        .events {
+            margin-bottom: 1rem;
             justify-content: space-between;
         }
 
-        .footer-menu h6 {
-            color: #F2FFC6;
-            text-align: left;
-            font-size: 14px;
-            margin: 10px;
-            position: relative;
-        }
-
         .footer-menu ul {
+            margin-bottom: 2rem;
             list-style: none;
-            text-align: left;
-
-        }
-
-        .footer-menu li {
-            margin: 10px 0;
+            padding-left: 0;
+            box-sizing: border-box;
+            margin-top: 0;
         }
 
         .footer-menu a {
+            display: block;
+            padding-left: 0;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            color: #fff;
             text-decoration: none;
             color: white;
         }
@@ -80,59 +160,106 @@
             color: hwb(0 85% 14%);
         }
 
+        .space {
+            --bs-columns: 18;
+            --bs-gap: 1.5rem;
+            grid-column: auto/span 12;
+            display: block !important;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            gap: 50%;
+        }
+
         /* Subscription Form */
-        .subscription-form {
-            text-align: left;
-            margin-left: 57%;
+        .new-to {
+            display: grid;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            margin-left: 30%;
+            padding-left: 20%;
+            padding-right: 20%;
         }
 
-        .subscription-form h6 {
-            color: #F2FFC6;
-            font-size: 14px;
-            margin-left: 0;
-        }
-
-        .subscription-form p {
-            font-size: 16px;
-            margin: 10px;
+        .new-to p {
+            margin-top: 0;
+            margin-bottom: 1rem;
         }
 
         .input-group {
             display: flex;
             justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-bottom: 1rem !important;
+            align-items: stretch;
+            width: 100%;
         }
 
         input[type="email"] {
-            padding: 10px;
-            font-size: 12px;
+            padding: .75rem 1rem;
+            display: block;
+            width: 100%;
+            box-shadow: none;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
             font-family: 'Poppins', sans-serif;
             border: 1px solid #ccc;
-            border-radius: 1px;
-            width: 15%;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .375rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
         .subscription-button {
-            padding: 10px 20px;
+            padding: .75rem 1rem;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 600;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(90deg, #ffbf00 10%, rgb(231, 168, 161) 33.33%);
+            flex: 0 0 auto;
+            margin-left: -1px;
+            border-top-right-radius: .375rem;
+            border-bottom-right-radius: .375rem;
+            background-image: linear-gradient(90deg, #F5A340 0%, #F5A340 33.33%, #F29A8C 66.66%, #F29A8C 100%);
             color: rgb(255, 255, 255);
-            border: 0px solid #ccc;
-            border-radius: 5px;
+            border: none;
             cursor: pointer;
         }
 
         .subscription-button:hover {
-            background: linear-gradient(90deg, #47f894 0%, #00d084 33.33%);
+            background: linear-gradient(90deg, #47C46D 66.66%, #50B588 100%);
         }
 
-        /* Copyright */
-        .copyright {
-            font-size: 14px;
-            margin-top: 10px;
-            text-align: center;
+        hr {
+            margin: 1rem 0;
+            color: inherit;
+            border: 0;
+            border-top: 1px solid;
+            opacity: .25;
         }
+
+        .copyright {
+            text-align: center !important;
+            padding-top: 1rem !important;
+            width: 100%;
+        }
+
+        small {
+            font-size: 0.875em;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-right: 1rem !important;
+        }
+
+        
     </style>
 </head>
 
@@ -140,16 +267,19 @@
     <footer id="mainFooter">
         <div class="container">
             <div class="grid pb-3" style="--bs-columns: 12; --bs-gap: 1rem;">
-                <div class="header">
+
+                <div class="g-col-12 g-col-lg-4 g-col-xl-3">
                     <figure class="figure pb-4 pb-xl-0 about-tab">
                         <img src="https://www.7-eleven.com.ph/wp-content/uploads/2022/10/7-eleven-logo.png" alt="7-Eleven" width="70" class="figure-img img-fluid">
-                        <figcaption class="text-start">7-Eleven is the largest convenience store chain in the world. There are currently around 83,485 7-Eleven stores across the world, serving customers in 17 countries including Japan, Australia, Canada, Taiwan, Mexico, Malaysia, Thailand, Singapore, Sweden, and China.</figcaption>
+                        <figcaption class="text-start mt-3">7-Eleven is the largest convenience store chain in the world. There are currently around 83,485 7-Eleven stores across the world, serving customers in 17 countries including Japan, Australia, Canada, Taiwan, Mexico, Malaysia, Thailand, Singapore, Sweden, and China.</figcaption>
                     </figure>
                 </div>
-                <div class="menu">
-                    <div class="grid footer-menu" style="--bs-columns: 18; --bs-gap: 1.5rem;">
+
+                <div class="g-col-12 g-col-lg-8 g-col-xl-9 pb-3 d-none d-sm-block">
+                    <div class="footer-menu" style="--bs-columns: 18; --bs-gap: 1.5rem;">
+
                         <!-- Footer 1 -->
-                        <div>
+                        <div class="g-col-6 g-col-sm-9 g-col-md-6 g-col-xl-4">
                             <h6>IMPORTANT</h6>
                             <ul>
                                 <li><a href="#" class="no-link-style">Franchising</a></li>
@@ -157,7 +287,8 @@
                                 <li><a href="#" class="no-link-style">CLiQQ</a></li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- Footer 2 -->
+                        <div class="g-col-6 g-col-sm-9 g-col-md-6 g-col-xl-4">
                             <h6>MORE INFO</h6>
                             <ul>
                                 <li><a href="#" class="no-link-style">FAQs</a></li>
@@ -166,7 +297,8 @@
                                 <li><a href="#" class="no-link-style">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- Footer 3 -->
+                        <div class="g-col-6 g-col-sm-9 g-col-md-6 g-col-xl-4">
                             <h6>CORPORATE</h6>
                             <ul>
                                 <li><a href="#" class="no-link-style">Our Company</a></li>
@@ -175,7 +307,8 @@
                                 <li><a href="#" class="no-link-style">Company Disclosure</a></li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- Footer 4 -->
+                        <div class="g-col-6 g-col-sm-9 g-col-md-6 g-col-xl-4">
                             <h6>GET TO KNOW US</h6>
                             <ul>
                                 <li><a href="#" class="no-link-style">About 7-Eleven</a></li>
@@ -184,39 +317,43 @@
                                 <li><a href="#" class="no-link-style">Careers</a></li>
                             </ul>
                         </div>
-                        <div>
+                        <!-- Footer 5 -->
+                        <div class="g-col-6 g-col-sm-9 g-col-md-6 g-col-xl-4">
                             <h6>EVENTS</h6>
                             <ul>
                                 <li><a href="#" class="no-link-style">Trail 7-Eleven</a></li>
                                 <li><a href="#" class="no-link-style">Run 7-Eleven</a></li>
                             </ul>
                         </div>
+                        <!-- Download buttons -->
+                        <!-- Social media -->
+                        <div class="space">
+                        </div>
+
+                        <!-- Subscription -->
+                        <div class="new-to">
+                            <h6>NEW TO 7-ELEVEN?</h6>
+                            <p>Sign up for emails to get the latest scoop on exclusive offers, service updates, and more fun stuff.</p>
+                            <div class="subscription-form">
+                                <form class="input-group">
+                                    <input type="email" placeholder="Enter your Email Address">
+                                    <button class="subscription-button" type="button">SUBSCRIBE</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Subscription Form -->
-            <div class="subscription-form">
-                <h6>NEW TO 7-ELEVEN?</h6>
-                <p> Sign up for emails to get the latest scoop<br> on exclusive offers, service updates and <br> more fun stuff
-                </p>
-                <form class="input-group">
-                    <input type="email" placeholder="Enter your Email Address">
-                    <button class="subscription-button" type="button">SUBSCRIBE</button>
-                </form>
+            <div class="hr">
+                <hr>
             </div>
-            <hr>
+            <div class="copyright">
+                <small>
+                    <p>&copy; 2022 Philippine Seven Corporation | All rights reserved.</p>
+                </small>
+            </div>
         </div>
-
-    <!-- Copyright -->
-    <div class="container">
-        <div class="copyright">
-            <p>&copy; 2022 Philippine Seven Corporation | All rights reserved.</p>
-        </div>
-    </div>
     </footer>
-
-
 </body>
 
 </html>

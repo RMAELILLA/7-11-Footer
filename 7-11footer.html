@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #mainFooter::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            display: block;
+            width: 100%;
+            height: 38px;
+            background: linear-gradient(0deg, #DF4033 20%, #fff 20%, #fff 32%, #0A7F62 32%, #0A7F62 68%, #fff 68%, #fff 80%, #EF7139 80%);
+        }
+
+        #mainFooter {
+            position: relative;
+            padding-top: 5rem;
+            padding-bottom: 1rem;
+            background-color: #0a7f62;
+            font-size: .875rem;
+            color: #fff;
+        }
+
+        .container {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding: 2rem 0;
+            margin: 0 auto;
+        }
+
+        .main {
+            --bs-columns: 6;
+            --bs-gap: 1rem;
+            padding-bottom: 1rem !important;
+            display: grid;
+            gap: var(--bs-gap, 1rem);
+        }
+
+        .main-about {
+            --bs-columns: 12;
+            --bs-gap: 1rem;
+        }
+
+        .about {
+            margin: 5px 0;
+            width: 21%;
+            word-spacing: 4px;
+            letter-spacing: 50%;
+            text-align: left;
+            position: absolute;
+            padding-left: 5%;
+        }
+
+        .figure {
+            display: inline-block;
+            margin-block-start: 1em;
+            margin-block-end: 1rem;
+            margin-inline-start: 110px;
+            margin-inline-end: 40px;
+            margin: 0;
+        }
+
+        .figure-img {
+            margin-bottom: .5rem;
+            line-height: 1;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        img,
+        svg {
+            vertical-align: middle;
+        }
+
+        figcaption {
+            line-height: 1.7;
+        }
+
+        .text-start {
+            text-align: left !important;
+            margin-top: 1rem !important;
+        }
+
+        .main-menu {
+            --bs-columns: 12;
+            --bs-gap: 1rem;
+            padding-bottom: 1rem !important;
+        }
+
+        .menu {
+            display: block !important;
+            padding-bottom: 1rem !important;
+            margin-left: 30%;
+        }
+
+        .footer-menu {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem; /* Adjust the gap as needed */
+        }
+
+        .footer-menu h6,
+        .subscription-form h6 {
+            color: #f2ffc6;
+            font-weight: 600;
+            font-size: .875rem;
+            letter-spacing: .5px;
+            margin-top: 0;
+            margin-bottom: .5rem;
+            line-height: 1.25;
+        }
+
+        .important,
+        .more-info,
+        .corporate,
+        .get-know,
+        .events {
+            margin-bottom: 1rem;
+            justify-content: space-between;
+        }
+
+        .footer-menu ul {
+            list-style: none;
+            padding-left: 0;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            box-sizing: border-box;
+            margin-top: 0;
+        }
+
+        .footer-menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer-menu a:hover {
+            color: hwb(0 85% 14%);
+        }
+
+        /* Subscription Form */
+        .subscription-form {
+            display: grid;
+            margin-top: 0;
+            margin-left: 30%;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        .subscription-form p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-bottom: 1rem !important;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        input[type="email"] {
+            padding: .75rem 1rem;
+            display: block;
+            width: 100%;
+            box-shadow: none;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #ccc;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .375rem;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .subscription-button {
+            padding: .75rem 1rem;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            flex: 0 0 auto;
+            margin-left: -1px;
+            border-top-right-radius: .375rem;
+            border-bottom-right-radius: .375rem;
+            background-image: linear-gradient(90deg, #F5A340 0%, #F5A340 33.33%, #F29A8C 66.66%, #F29A8C 100%);
+            color: rgb(255, 255, 255);
+            border: none;
+            cursor: pointer;
+        }
+
+        .subscription-button:hover {
+            background: linear-gradient(90deg, #47C46D 66.66%, #50B588 100%);
+        }
+
+        hr {
+            margin: 1rem 0;
+            color: inherit;
+            border: 0;
+            border-top: 1px solid;
+            opacity: .25;
+        }
+
+        .copyright {
+            text-align: center !important;
+            padding-top: 1rem !important;
+            width: 100%;
+        }
+
+        small {
+            font-size: 0.875em;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-right: 1rem !important;
+        }
+    </style>
+</head>
+
+<body>
+    <footer id="mainFooter">
+        <div class="container">
+            <div class="main">
+                <div class="main-about">
+                    <figure class="about">
+                        <img src="https://www.7-eleven.com.ph/wp-content/uploads/2022/10/7-eleven-logo.png" alt="7-Eleven" width="70" class="figure-img img-fluid">
+                        <figcaption class="text-start">
+                            7-Eleven is the largest convenience store chain in the world. There are currently around 83,485 7-Eleven stores across the world, serving customers in 17 countries including Japan, Australia, Canada, Taiwan, Mexico, Malaysia, Thailand, Singapore, Sweden and China.
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="main-menu">
+                    <div class="menu">
+                        <div class="footer-menu">
+                            <!-- Footer 1 -->
+                            <div class="important">
+                                <h6>IMPORTANT</h6>
+                                <ul>
+                                    <li><a href="#" class="no-link-style">Franchising</a></li>
+                                    <li><a href="#" class="no-link-style">Store Locator</a></li>
+                                    <li><a href="#" class="no-link-style">CLiQQ</a></li>
+                                </ul>
+                            </div>
+                            <div class="more-info">
+                                <h6>MORE INFO</h6>
+                                <ul>
+                                    <li><a href="#" class="no-link-style">FAQs</a></li>
+                                    <li><a href="#" class="no-link-style">Terms & Conditions</a></li>
+                                    <li><a href="#" class="no-link-style">Privacy Policy</a></li>
+                                    <li><a href="#" class="no-link-style">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="corporate">
+                                <h6>CORPORATE</h6>
+                                <ul>
+                                    <li><a href="#" class="no-link-style">Our Company</a></li>
+                                    <li><a href="#" class="no-link-style">Investor Relations</a></li>
+                                    <li><a href="#" class="no-link-style">Corporate Governance</a></li>
+                                    <li><a href="#" class="no-link-style">Company Disclosure</a></li>
+                                </ul>
+                            </div>
+                            <div class="get-know">
+                                <h6>GET TO KNOW US</h6>
+                                <ul>
+                                    <li><a href="#" class="no-link-style">About 7-Eleven</a></li>
+                                    <li><a href="#" class="no-link-style">Newsroom</a></li>
+                                    <li><a href="#" class="no-link-style">Selling to 7-Eleven</a></li>
+                                    <li><a href="#" class="no-link-style">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div class="events">
+                                <h6>EVENTS</h6>
+                                <ul>
+                                    <li><a href="#" class="no-link-style">Trail 7-Eleven</a></li>
+                                    <li><a href="#" class="no-link-style">Run 7-Eleven</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Subscription Form -->
+                        <div class="subscription-form">
+                            <h6>NEW TO 7-ELEVEN?</h6>
+                            <p>Sign up for emails to get the latest scoop on exclusive offers, service updates and more fun stuff.</p>
+                            <form class="input-group">
+                                <input type="email" placeholder="Enter your Email Address">
+                                <button class="subscription-button" type="button">SUBSCRIBE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hr">
+                <hr>
+            </div>
+            <div class="copyright">
+                <small>
+                    <p>&copy; 2022 Philippine Seven Corporation | All rights reserved.</p>
+                </small>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
